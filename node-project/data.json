@@ -1,0 +1,24 @@
+{
+    "dogs": [{
+      "type" : "German Shepherd",
+      "name": "Bob",
+      "shortname": "german_shepherd",
+      "summary" : "",
+      "description": "<p></p>",
+      "photos": ["german_shepherd_01.jpg"]
+    },{
+      "type" : "Golden Retriever",
+      "name": "Poopy Head",
+      "shortname": "golden_retriever",
+      "summary": "",
+      "description": "<p></p>",
+      "photos" : ["golden_retriever_01.jpg"]
+    },{
+      "type" : "Greyhound",
+      "name": "Rudy The Racer",
+      "shortname": "greyhound",
+      "summary": "",
+      "description": "<p></p>",
+      "photos" : ["greyhound_01.jpg"]
+    }]
+  }
