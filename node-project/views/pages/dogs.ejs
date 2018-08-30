@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dogs</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <% include ../partials/header.ejs %>
+    <div class="homePhoto">
+        </div><div id="foobar"><img src="images/german_shepherd_01.jpg" width="100%" alt="" /></div>
+    <div class="name">
+        <h1 style="text-transform: uppercase;"><%= dog[id].name%></h1>
+        <h2><%= dog[id].description %></h2>
+    </div>
+    <% include ../partials/footer.ejs %>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+</body>
+</html>

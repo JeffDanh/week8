@@ -4,28 +4,28 @@ var router = express.Router();
 router.get('/dogs', function(req, res) {
   var data = req.app.get('appData');
   var pagePhotos = [];
-  var pageSpeakers = data.speakers;
+  var pageDogs = data.dogs;
 
   data.speakers.forEach(function(item) {
     pagePhotos = pagePhotos.concat(item.artwork);
   });
 
   res.render('dogs', {
-    pageTitle: 'Speakers',
+    pageTitle: 'Dogs',
     artwork: pagePhotos,
-    speakers: pageSpeakers,
-    pageID: 'speakerList'
+    dogs: pageDogs,
+    pageID: 'dogList'
   });
 });
 
 router.get('/dogs/:dogid', function(req, res) {
   var data = req.app.get('appData');
   var pagePhotos = [];
-  var pageSpeakers = [];
+  var pageDogs = [];
 
-  data.speakers.forEach(function(item) {
-    if (item.shortname == req.params.speakerid) {
-      pageSpeakers.push(item);
+  data.dogs.forEach(function(item) {
+    if (item.shortname == req.params.dogid) {
+      pageDogs.push(item);
       pagePhotos = pagePhotos.concat(item.artwork);
     }
   });
@@ -33,7 +33,7 @@ router.get('/dogs/:dogid', function(req, res) {
   res.render('dogs', {
     pageTitle: 'Dog Info',
     artwork: pagePhotos,
-    speakers: pageSpeakers,
+    dogs: pageDogs,
     pageID: 'dogDetail'
   });
 });

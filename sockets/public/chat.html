@@ -5,13 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        #messages{
+            list-style-type: none;
+        }
+
+        .chat-box{
+            background-color: white;
+            border: solid 2px #666;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 360px;
+            /* height: 200px; */
+        }
+        #chat-box-title{
+            background-color: #777;
+            padding: 10px;
+            color: white;
+            margin-top: -10px;
+            
+        }
+        #m{
+            width: 310px;
+        }
+
+    
+    </style>
 </head>
 <body>
-    hello world
-    <ul id="messages"></ul>
-    <form action="">
-        <input id="m" autocomplete="off" /><button>Send</button>
-    </form>
+    
+    <div class="chat-box">
+        <p id="chat-box-title">Support</p>
+        <ul id="messages"></ul>
+        <form action="">
+            <input id="m" autocomplete="off" /><button>Send</button>
+        </form>
+    </div>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
     <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
     <script>
